@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Karakter Udregner</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="stylesheets/style.css" rel="stylesheet">
+	</head>
+
+    <body>
+        <div id="fagModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Nyt fag</h2>
+                </div>
+                <center>
+                    <div class="modal-body">
+                        <table style="background-color: transparent; border: none;">
+                            <tr>
+                                <td style="font-weight: bold;">Fag</td>
+                                <td><input id="fagNvn" type="text" placeholder="Dansk"></td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">Type</td>
+                                <td>
+                                    <select name="type" id="fagTyp">
+                                        <option value="Mundtlig">Mundtlig</option>
+                                        <option value="Skriftlig">Skriftlig</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">Vægtning</td>
+                                <td>
+                                    <select name="level" id="fagLvl">
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: bold;">Karakter</td>
+                                <td><input id="fagRes" type="text" placeholder="7"></td>
+                            </tr>
+                        </table>
+                        <button onclick="lavNyFag()">Tilføj</button>
+                    </div>
+                </center>
+            </div>
+        </div>
+        
+        <center>
+            <table class="fag" id="fagTbl">
+                <tr class="fagRow">
+                    <th class="fagContent">Fag</th>
+                    <th class="fagContent">Vægtning</th>
+                    <th class="fagContent">Karakter</th>
+                </tr>
+                <tr class="fagContent">
+                    <td class="fagContent" style="border-top: 5px solid #aaa; font-weight: bold; background-color: #ddd;">Snit</td>
+                    <td class="fagContent" style="border-top: 5px solid #aaa; background-color: #fff"; id="snitTd" colspan="2">0</td>
+                </tr>
+            </table>
+
+            <br>
+            <button id="nyButton" onclick="nyFag()">Tilføje nyt fag</button>
+        </center>
+    </body>
+
+    <script src="scripts/script.js"></script>
+</html>
